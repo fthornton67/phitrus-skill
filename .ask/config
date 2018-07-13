@@ -1,0 +1,41 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.0562fb6b-b2fe-425b-a8df-8cee58db222a",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-phitrus-skill-default"
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "eTag": "aea2d8c9299f4c2c9db6430b93cbca34"
+        },
+        "interactionModel": {
+          "en-US": {
+            "eTag": "edceaa72ac13757059cb768ccbdf3b67"
+          }
+        },
+        "lambda": [
+          {
+            "arn": "arn:aws:lambda:us-east-1:164799221397:function:ask-custom-phitrus-skill-default",
+            "functionName": "ask-custom-phitrus-skill-default",
+            "awsRegion": "us-east-1",
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "revisionId": "21c0b711-ecf6-4a7a-87f9-a6945ab23b98"
+          }
+        ]
+      },
+      "in_skill_products": []
+    }
+  }
+}
