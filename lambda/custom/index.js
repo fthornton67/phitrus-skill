@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    const speechText = 'Welcome to the Alexa Skills Kit, you can say hello!';
+    const speechText = 'Welcome to the phitrus skill, say hello!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -18,17 +18,17 @@ const LaunchRequestHandler = {
   },
 };
 
-const HelloWorldIntentHandler = {
+const PhitrGreetingIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
+      && handlerInput.requestEnvelope.request.intent.name === 'phitr_greeting';
   },
   handle(handlerInput) {
-    const speechText = 'Hello World!';
+    const speechText = 'Welcome to a Phitr World!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withSimpleCard('..: phitr :..', speechText)
       .getResponse();
   },
 };
@@ -95,7 +95,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    PhitrGreetingIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
